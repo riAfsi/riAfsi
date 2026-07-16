@@ -9,9 +9,9 @@
 
 ## 🏎️ Corrida de Carrinhos
 
-![Corrida](race.png)
+![Corrida](race.gif)
 
-*A cada 6 horas, os carrinhos andam sozinhos!*
+*A cada 30 minutos, um novo frame é adicionado à animação!*
 
 
 ## 📊 Estatísticas do GitHub
