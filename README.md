@@ -7,6 +7,13 @@
 
 ---
 
+## 🏁 Corrida de Carrinhos
+
+![Corrida](race.gif?raw=true)
+
+*A cada 6 horas, os carrinhos andam sozinhos!*
+
+
 ## 📊 Estatísticas do GitHub
 
 <div align="center">
