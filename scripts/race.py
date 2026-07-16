@@ -6,9 +6,8 @@ import json
 # ===== CONFIGURAÇÕES =====
 LARGURA = 900
 ALTURA = 500
-MAX_FRAMES = 60          # Número máximo de quadros no GIF
-ARQUIVO_JSON = 'positions.json'
-ARQUIVO_GIF = 'race.gif'
+NUM_FRAMES = 20           # Quantos frames terá o GIF (quanto mais, mais suave)
+VELOCIDADE_MAX = 8        # Máximo de pixels que um carro anda por frame
 
 # ===== DADOS DOS CARRINHOS =====
 carros = [
@@ -55,62 +54,38 @@ def desenhar_frame(posicoes):
     draw.text((LARGURA//2 - 100, 10), "🏎️ CORRIDA DE CARRINHOS", fill='white', stroke_width=1, stroke_fill='black')
     return img
 
-# ===== LER OU CRIAR JSON DE POSIÇÕES =====
-if os.path.exists(ARQUIVO_JSON):
-    with open(ARQUIVO_JSON, 'r') as f:
-        posicoes = json.load(f)
-else:
-    # Posições iniciais aleatórias
-    posicoes = [random.randint(60, LARGURA-100) for _ in range(4)]
+# ===== GERAR POSIÇÕES INICIAIS (aleatórias) =====
+# Cada carro começa em uma posição diferente
+posicoes_iniciais = [random.randint(60, 200) for _ in range(4)]
 
-# ===== ANDAR (INCREMENTAR POSIÇÃO) =====
-# Cada carro anda um pouco, com sorte diferente
-for i in range(len(posicoes)):
-    andar = random.randint(5, 25)   # anda entre 5 e 25 pixels
-    nova_pos = posicoes[i] + andar
-    if nova_pos > LARGURA - 50:
-        nova_pos = 60  # se passar do fim, volta para o início
-    posicoes[i] = nova_pos
-
-# ===== SALVAR POSIÇÕES ATUALIZADAS =====
-with open(ARQUIVO_JSON, 'w') as f:
-    json.dump(posicoes, f)
-
-# ===== CRIAR O NOVO FRAME =====
-novo_frame = desenhar_frame(posicoes)
-
-# ===== CARREGAR GIF EXISTENTE OU CRIAR NOVO =====
+# ===== GERAR MÚLTIPLOS FRAMES =====
 frames = []
-if os.path.exists(ARQUIVO_GIF):
-    # Abrir o GIF existente e extrair os quadros
-    gif_antigo = Image.open(ARQUIVO_GIF)
-    for frame in range(gif_antigo.n_frames):
-        gif_antigo.seek(frame)
-        frames.append(gif_antigo.copy())
-else:
-    # Se não existe GIF, os frames começarão vazios
-    pass
+posicoes = posicoes_iniciais.copy()
 
-# Adicionar o novo frame
-frames.append(novo_frame)
+for frame_num in range(NUM_FRAMES):
+    # Avançar as posições (cada carro anda uma distância aleatória)
+    for i in range(len(posicoes)):
+        andar = random.randint(3, VELOCIDADE_MAX)
+        nova_pos = posicoes[i] + andar
+        # Se passar do fim, volta para o início
+        if nova_pos > LARGURA - 50:
+            nova_pos = 60
+        posicoes[i] = nova_pos
+    
+    # Desenha o frame atual
+    img = desenhar_frame(posicoes)
+    frames.append(img)
 
-# Se exceder o limite, remover o primeiro frame (mais antigo)
-if len(frames) > MAX_FRAMES:
-    frames = frames[-MAX_FRAMES:]
-
-# ===== SALVAR GIF =====
-if len(frames) > 0:
-    # Salvar como GIF animado
+# ===== SALVAR GIF ANIMADO =====
+if frames:
     frames[0].save(
-        ARQUIVO_GIF,
+        'race.gif',
         save_all=True,
         append_images=frames[1:],
-        duration=200,           # 200ms por frame
+        duration=100,        # 100ms entre frames (10 fps)
         loop=0,
         optimize=False
     )
-    print(f"✅ GIF atualizado com {len(frames)} frames!")
+    print(f"✅ GIF gerado com {len(frames)} frames!")
 else:
-    print("❌ Nenhum frame para salvar.")
-
-print("🏁 Corrida atualizada!")
+    print("❌ Nenhum frame gerado.")
