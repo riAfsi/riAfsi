@@ -32,7 +32,7 @@
 
 <div align="left">
 
-![GitHub followers](https://img.shields.io/github/followers/riAfsi?style=social)
-![GitHub User's stars](https://img.shields.io/github/stars/riAfsi?style=social)
+![GitHub followers](https://img.shields.io/github/followers/riAfsi?style=social&cache=no)
+![GitHub stars](https://img.shields.io/github/stars/riAfsi?style=social&cache=no)
 
 </div>
