@@ -14,7 +14,7 @@
 | | |
 | :---: | :---: |
 | **Total de Contribuições** | **Sequência Atual** |
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=riAfsi&show_icons=true&theme=dark&hide_title=true) | [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark)](https://github.com/denvercoder1/github-readme-streak-stats) |
+| ![GitHub Stats](https://github-stats-extended.vercel.app/api?username=riAfsi&show_icons=true&theme=dark&hide_title=true) | [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark)](https://github.com/denvercoder1/github-readme-streak-stats) |
 | **Maior Sequência** | |
 | [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark&hide_current_streak=true&hide_longest_streak=false)](https://github.com/denvercoder1/github-readme-streak-stats) | |
 
@@ -30,7 +30,7 @@
 
 ## ⭐ Seguidores & Estrelas
 
-<div align="center">
+<div align="left">
 
 ![GitHub followers](https://img.shields.io/github/followers/riAfsi?style=social)
 ![GitHub User's stars](https://img.shields.io/github/stars/riAfsi?style=social)
