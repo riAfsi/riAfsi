@@ -1,13 +1,12 @@
 from PIL import Image, ImageDraw
 import random
 import os
-import json
 
 # ===== CONFIGURAÇÕES =====
 LARGURA = 900
 ALTURA = 500
-NUM_FRAMES = 20           # Quantos frames terá o GIF (quanto mais, mais suave)
-VELOCIDADE_MAX = 8        # Máximo de pixels que um carro anda por frame
+NUM_FRAMES = 25           # Quantos frames (quanto mais, mais suave)
+VELOCIDADE_MAX = 10       # Máximo de pixels por frame (ajuste para andar mais rápido)
 
 # ===== DADOS DOS CARRINHOS =====
 carros = [
@@ -51,29 +50,31 @@ def desenhar_frame(posicoes):
 
         draw.text((pos_x - 30, y - 55), carro['nome'], fill='white')
 
+    # Título
     draw.text((LARGURA//2 - 100, 10), "🏎️ CORRIDA DE CARRINHOS", fill='white', stroke_width=1, stroke_fill='black')
     return img
 
-# ===== GERAR POSIÇÕES INICIAIS (aleatórias) =====
-# Cada carro começa em uma posição diferente
-posicoes_iniciais = [random.randint(60, 200) for _ in range(4)]
+# ===== GERAR POSIÇÕES INICIAIS =====
+# Cada carro começa em uma posição diferente, próximo ao início
+posicoes = [random.randint(40, 120) for _ in range(4)]
 
 # ===== GERAR MÚLTIPLOS FRAMES =====
 frames = []
-posicoes = posicoes_iniciais.copy()
+pos_atual = posicoes.copy()
 
 for frame_num in range(NUM_FRAMES):
     # Avançar as posições (cada carro anda uma distância aleatória)
-    for i in range(len(posicoes)):
-        andar = random.randint(3, VELOCIDADE_MAX)
-        nova_pos = posicoes[i] + andar
-        # Se passar do fim, volta para o início
-        if nova_pos > LARGURA - 50:
-            nova_pos = 60
-        posicoes[i] = nova_pos
+    for i in range(len(pos_atual)):
+        # Cada carro tem uma velocidade diferente (alguns mais rápidos)
+        andar = random.randint(5, VELOCIDADE_MAX)
+        nova_pos = pos_atual[i] + andar
+        # Se passar do fim da pista, para no final (não volta)
+        if nova_pos > LARGURA - 60:
+            nova_pos = LARGURA - 60
+        pos_atual[i] = nova_pos
     
     # Desenha o frame atual
-    img = desenhar_frame(posicoes)
+    img = desenhar_frame(pos_atual)
     frames.append(img)
 
 # ===== SALVAR GIF ANIMADO =====
@@ -82,7 +83,7 @@ if frames:
         'race.gif',
         save_all=True,
         append_images=frames[1:],
-        duration=100,        # 100ms entre frames (10 fps)
+        duration=120,        # 120ms entre frames (mais suave)
         loop=0,
         optimize=False
     )
