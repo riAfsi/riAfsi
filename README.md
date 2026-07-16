@@ -7,9 +7,9 @@
 
 ---
 
-## 🏁 Corrida de Carrinhos
+## 🏎️ Corrida de Carrinhos
 
-![Corrida](race.gif?raw=true)
+![Corrida](race.png)
 
 *A cada 6 horas, os carrinhos andam sozinhos!*
 
