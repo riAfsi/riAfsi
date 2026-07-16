@@ -2,7 +2,7 @@ name: Corrida de Carrinhos
 
 on:
   schedule:
-    - cron: "*/30 * * * *"    # A cada 30 minutos (mais frequente para animação)
+    - cron: "*/30 * * * *"   # A cada 30 minutos
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ jobs:
   race:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do código
+      - name: Pegar o código
         uses: actions/checkout@v3
 
       - name: Configurar Python
@@ -20,15 +20,15 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Instalar Pillow
+      - name: Instalar dependências
         run: pip install pillow
 
       - name: Executar script da corrida
         run: python scripts/race.py
 
-      - name: Commit do GIF e estado
+      - name: Commit das atualizações
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'race.gif estado.json'
-          message: '🏎️ Atualiza corrida (GIF animado)'
+          add: 'race.gif positions.json'
+          message: '🏎️ Novo frame da corrida'
           default_author: github_actions
