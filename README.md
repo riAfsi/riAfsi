@@ -1,16 +1,38 @@
-## Hi there 👋
+# 👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋
 
-<!--
-**riAfsi/riAfsi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Desenvolvedor FullStack
 
-Here are some ideas to get you started:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsovasconcelos09/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/alphonsiny/)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 📊 Estatísticas do GitHub
+
+<div align="center">
+
+| | |
+| :---: | :---: |
+| **Total de Contribuições** | **Sequência Atual** |
+| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=riAfsi&show_icons=true&theme=dark&hide_title=true) | [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark)](https://github.com/denvercoder1/github-readme-streak-stats) |
+| **Maior Sequência** | |
+| [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark&hide_current_streak=true&hide_longest_streak=false)](https://github.com/denvercoder1/github-readme-streak-stats) | |
+
+</div>
+
+---
+
+## 📈 Gráfico de Contribuições
+
+[![Gráfico de Contribuições](https://github-readme-activity-graph.vercel.app/graph?username=riAfsi&theme=github-dark&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+---
+
+## ⭐ Seguidores & Estrelas
+
+<div align="center">
+
+![GitHub followers](https://img.shields.io/github/followers/riAfsi?style=social)
+![GitHub User's stars](https://img.shields.io/github/stars/riAfsi?style=social)
+
+</div>
