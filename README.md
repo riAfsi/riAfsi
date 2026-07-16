@@ -9,7 +9,7 @@
 
 ## 🏎️ Corrida de Carrinhos
 
-![Corrida](race.gif)
+![Corrida](https://raw.githubusercontent.com/riAfsi/riAfsi/main/race.gif?nocache=1)
 
 *A cada 30 minutos, uma nova corrida é gerada!*
 
