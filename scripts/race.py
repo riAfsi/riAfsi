@@ -5,8 +5,7 @@ import os
 # ===== CONFIGURAÇÕES =====
 LARGURA = 900
 ALTURA = 500
-NUM_FRAMES = 25           # Quantos frames (quanto mais, mais suave)
-VELOCIDADE_MAX = 10       # Máximo de pixels por frame (ajuste para andar mais rápido)
+NUM_FRAMES = 30           # Quantos frames (mais = mais suave)
 
 # ===== DADOS DOS CARRINHOS =====
 carros = [
@@ -50,28 +49,35 @@ def desenhar_frame(posicoes):
 
         draw.text((pos_x - 30, y - 55), carro['nome'], fill='white')
 
-    # Título
     draw.text((LARGURA//2 - 100, 10), "🏎️ CORRIDA DE CARRINHOS", fill='white', stroke_width=1, stroke_fill='black')
     return img
 
 # ===== GERAR POSIÇÕES INICIAIS =====
-# Cada carro começa em uma posição diferente, próximo ao início
-posicoes = [random.randint(40, 120) for _ in range(4)]
+# Cada carro começa em uma posição diferente, perto do início
+posicoes_iniciais = [random.randint(40, 120) for _ in range(4)]
 
-# ===== GERAR MÚLTIPLOS FRAMES =====
+# ===== GERAR FRAMES (CORRIDA COMPLETA) =====
 frames = []
-pos_atual = posicoes.copy()
+pos_atual = posicoes_iniciais.copy()
+
+# Para cada carro, definir uma "velocidade" fixa (diferente)
+# Quanto maior, mais rápido chega ao fim
+velocidades = [random.uniform(0.8, 1.2) for _ in range(4)]
 
 for frame_num in range(NUM_FRAMES):
-    # Avançar as posições (cada carro anda uma distância aleatória)
+    # Progresso de 0 a 1 (0 = início, 1 = fim)
+    progresso = frame_num / (NUM_FRAMES - 1)
+    
+    # Cada carro anda de acordo com sua velocidade
     for i in range(len(pos_atual)):
-        # Cada carro tem uma velocidade diferente (alguns mais rápidos)
-        andar = random.randint(5, VELOCIDADE_MAX)
-        nova_pos = pos_atual[i] + andar
-        # Se passar do fim da pista, para no final (não volta)
-        if nova_pos > LARGURA - 60:
-            nova_pos = LARGURA - 60
-        pos_atual[i] = nova_pos
+        # Posição final = LARGURA - 60 (para não sair da pista)
+        pos_final = LARGURA - 60
+        # A posição atual é uma interpolação entre início e fim, com pequeno desvio aleatório
+        # Usamos a velocidade individual para dar diferença
+        progresso_real = progresso * velocidades[i]
+        if progresso_real > 1.0:
+            progresso_real = 1.0
+        pos_atual[i] = int(posicoes_iniciais[i] + progresso_real * (pos_final - posicoes_iniciais[i]))
     
     # Desenha o frame atual
     img = desenhar_frame(pos_atual)
@@ -83,7 +89,7 @@ if frames:
         'race.gif',
         save_all=True,
         append_images=frames[1:],
-        duration=120,        # 120ms entre frames (mais suave)
+        duration=120,        # 120ms entre frames
         loop=0,
         optimize=False
     )
