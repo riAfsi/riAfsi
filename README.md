@@ -11,7 +11,7 @@
 
 ![Corrida](race.gif)
 
-*A cada 30 minutos, um novo frame é adicionado à animação!*
+*A cada 30 minutos, uma nova corrida é gerada!*
 
 
 ## 📊 Estatísticas do GitHub
