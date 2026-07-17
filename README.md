@@ -1,4 +1,4 @@
-<img src="logo_AV.png" alt="Logo" width="60" style="vertical-align:middle; border-radius:10px; margin-right:10px;"> <span style="font-size:32px; font-weight:bold;">👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋</span>
+<img src="logo_AV.png" alt="Logo" width="100" style="vertical-align:middle; border-radius:20px; margin-right:20px;"> <span style="font-size:32px; font-weight:bold;">👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋</span>
 
 ### Desenvolvedor FullStack
 
