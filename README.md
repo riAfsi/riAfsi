@@ -1,6 +1,10 @@
-<img src="logo_AV.png" alt="Logo" width="100" style="vertical-align:middle; border-radius:20px; margin-right:20px;"> <span style="font-size:32px; font-weight:bold;">👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋</span>
-
-### Desenvolvedor FullStack
+<div align="left">
+  <img src="https://raw.githubusercontent.com/riAfsi/riAfsi/main/logo_AV.png" alt="Logo" width="120" style="border-radius:20px;">
+  
+  # 👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋
+  
+  *Desenvolvedor FullStack*
+</div>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsovasconcelos09/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/alphonsiny/)
