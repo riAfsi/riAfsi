@@ -1,10 +1,9 @@
-<div align="left">
-  <img src="https://raw.githubusercontent.com/riAfsi/riAfsi/main/logo_AV.png" alt="Logo" width="120" style="border-radius:20px;">
-  
-  ## Olá, eu sou Alphonsiny Vas 👋
-  
-  *Desenvolvedor FullStack*
-</div>
+<div style="background-color: #1e1e1e; padding: 20px; border-radius: 15px; color: #ffffff;">
+
+<img src="https://raw.githubusercontent.com/riAfsi/riAfsi/main/logo_AV.png" alt="Logo" width="100" style="vertical-align:middle; border-radius:20px; margin-right:15px;">
+<span style="font-size:36px; font-weight:bold; vertical-align:middle; color: #f0f0f0;">👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋</span>
+
+### Desenvolvedor FullStack
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsovasconcelos09/)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/alphonsiny/)
@@ -16,6 +15,8 @@
 ![Corrida](https://raw.githubusercontent.com/riAfsi/riAfsi/main/race.gif?nocache=1)
 
 *A cada 30 minutos, uma nova corrida é gerada!*
+
+</div>
 
 
 ## 📊 Estatísticas do GitHub
