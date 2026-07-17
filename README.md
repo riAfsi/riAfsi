@@ -1,7 +1,7 @@
 <div align="left">
   <img src="https://raw.githubusercontent.com/riAfsi/riAfsi/main/logo_AV.png" alt="Logo" width="120" style="border-radius:20px;">
   
-  # 👩🏻‍💻 Olá, eu sou Alphonsiny Vas 👋
+  ## Olá, eu sou Alphonsiny Vas 👋
   
   *Desenvolvedor FullStack*
 </div>
