@@ -29,7 +29,7 @@
 | **Maior Sequência** | |
 | [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=riAfsi&theme=dark&hide_current_streak=true&hide_longest_streak=false)](https://github.com/denvercoder1/github-readme-streak-stats) | |
 
-<img src="robot_v2.svg" width="500" alt="Texto Alternativo">
+<img src="robot_v3.svg" width="500" alt="Texto Alternativo">
 
 </div>
 
